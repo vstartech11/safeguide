@@ -5,22 +5,30 @@
         "api/index.php": { "runtime": "vercel-php@0.7.3" }
     },
     "routes": [
-        { "src": "/public/(.*)", "dest": "/public/$1" },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
+        { "src": "/build/(.*)", "dest": "/public/build/" },
+        { "src": "/(.*)", "dest": "/api/index.php" }
     ],
+    "public": true,
+    "buildCommand": "vite build",
+    "outputDirectory": "public",
     "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "APP_KEY": "base64:ijZDTk2eU8PSo1JRNOrlCAK+aIGfTzlpNGhiAdV7Aqs=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
-
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "SESSION_DRIVER": "cookie",
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "0wi82.h.filess.io",
+        "DB_PORT": "3307",
+        "DB_DATABASE": "SAFEGUIDEDB_yellowrush",
+        "DB_USERNAME": "SAFEGUIDEDB_yellowrush",
+        "DB_PASSWORD": "2d9a7a453251fa4bfcfefc5e7eff6975fcf8b80a"
     }
 }
