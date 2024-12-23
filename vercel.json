@@ -15,7 +15,7 @@
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "public": true,
-    "buildCommand": "php artisan vendor:publish --tag=filament-assets --force && php artisan vendor:publish --tag=livewire:assets --force && vite build",
+    "buildCommand": " vite build",
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
