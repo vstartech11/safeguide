@@ -6,7 +6,7 @@
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        { "src": "^/admin(/.*)?$", "dest": "/api/index.php" }
     ],
     "public": true,
     "buildCommand": "vite build",
@@ -29,6 +29,7 @@
         "DB_PORT": "3307",
         "DB_DATABASE": "SAFEGUIDEDB_yellowrush",
         "DB_USERNAME": "SAFEGUIDEDB_yellowrush",
-        "DB_PASSWORD": "2d9a7a453251fa4bfcfefc5e7eff6975fcf8b80a"
+        "DB_PASSWORD": "2d9a7a453251fa4bfcfefc5e7eff6975fcf8b80a",
+        "FILAMENT_ADMIN_ENABLED": "true"
     }
 }
